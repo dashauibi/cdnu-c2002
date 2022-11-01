@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login in </title>
+    <link rel="stylesheet" th:href="@{https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css}" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <script th:src="@{/js/md5.min.js}"></script>
+    <script th:src="@{/js/login.js}"></script>
+</head>
+
+<body>
+    <div class="container">
+        <form action="/login" class="form-signin" onsubmit="return check()" method="post">
+            <h2 class="form-signin-heading" style="text-align: center;margin-top: 200px">请登陆</h2>
+            <label for="inputEmail" class="sr-only">邮件地址</label>
+            <input type="email"  name="email" style="width: 25%;margin-left: 38%" id="inputEmail" class="form-control" placeholder="Email addres" required>
+            <label for="inputPassword" class="sr-only">PassWord</label>
+            <input type="password" name="password" style="width: 25%;margin-left: 38%" id="inputPassword" class="form-control" placeholder="Password" required>
+            <div class="checkbox" style="text-align: center">
+                <label >
+            <input type="checkbox" value="remember-me">
+            Remember me
+                </label>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block" style="width: 20%;margin-left: 40.5%" type="submit">Sign in</button>
+        </form>
+    </div>
+</body>
+<script th:src="@{https://code.jquery.com/jquery-1.12.4.min.js}" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<!-- <script src="https://cdn.jsdelivr.cn/npm/jquery@1.12.4/dist/jquery.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script> -->
+<script th:src="@{https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js}" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+</html>

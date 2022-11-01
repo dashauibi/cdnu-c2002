@@ -1,0 +1,17 @@
+spring:
+  messages:
+    basename: i18n.login
+  thymeleaf:
+    cache: false
+    suffix: .html
+    encoding: utf-8
+    servlet:
+      content-type: text/html
+    check-template-location: true
+    check-template: true
+    prefix: classpath:/templates/
+    enabled: true
+  application:
+    name: jpa
+server:
+  port: 8080
